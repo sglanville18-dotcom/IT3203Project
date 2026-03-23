@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Project | HTTP Overview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared navigation -->
+  <header class="site-header">
+  <div class="nav-container">
+    <div class="brand">HTTP Project</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="http-overview.html">HTTP Overview</a>
+      <a href="http-evolution-security.html">Evolution & Security</a>
+      <a href="http-key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="page-container">
+    <section class="page-banner">
+      <h1>HTTP Overview</h1>
+      <p>
+        This page explains what HTTP is, how it works, and why it is important to everyday internet use.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What HTTP Does</h2>
+      <p>
+        HTTP stands for Hypertext Transfer Protocol. It is the set of rules that allows a client and a server
+        to communicate across the web. In most cases, the client is a web browser and the server is the computer
+        that stores the website or application data. HTTP is important because it creates a standard way for
+        browsers and servers to exchange information.
+      </p>
+
+      <h2>How the Request-Response Process Works</h2>
+      <ol>
+        <li>The user enters a web address or clicks a link.</li>
+        <li>The browser sends an HTTP request to the server.</li>
+        <li>The server processes the request and finds the correct resource.</li>
+        <li>The server sends back an HTTP response.</li>
+        <li>The browser displays the webpage, image, or other content.</li>
+      </ol>
+
+      <!-- Simple image section to meet the image requirement -->
+      <img
+        class="info-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/HTTP_logo.svg"
+        alt="HTTP logo used as a visual for the page">
+
+      <h2>Common HTTP Methods</h2>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Main Purpose</th>
+          <th>Example Use</th>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>Retrieves information from a server</td>
+          <td>Opening a webpage or loading a product page</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>Sends data to a server</td>
+          <td>Submitting a login form or creating a new account</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>Updates an existing resource</td>
+          <td>Editing profile information in a web app</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>Removes a resource</td>
+          <td>Deleting a saved item or record</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <strong>Student Note:</strong> One reason HTTP has stayed important for so long is that it is simple
+        enough to understand at a basic level but flexible enough to support modern websites and apps.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <p>This is a class project for IT 3203. Visit the
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

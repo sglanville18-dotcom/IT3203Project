@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Project | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared navigation bar -->
+  <header class="site-header">
+  <div class="nav-container">
+    <div class="brand">HTTP Project</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="http-overview.html">HTTP Overview</a>
+      <a href="http-evolution-security.html">Evolution & Security</a>
+      <a href="http-key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="page-container">
+    <!-- Intro section for the homepage -->
+    <section id="hero">
+      <h1>Hypertext Transfer Protocol (HTTP)</h1>
+      <p>
+        This website explains HTTP, which is one of the main technologies that makes the World Wide Web work.
+        It focuses on what HTTP does, how it developed over time, and why it still matters in modern computing.
+        My research started from Assignment 1 and was turned into a simple website for this project milestone.
+      </p>
+    </section>
+
+    <!-- Main page content using CSS Grid -->
+    <section class="grid-layout">
+      <article class="card">
+        <h2>Brief Introduction</h2>
+        <p>
+          HTTP is the communication protocol that allows a browser and a web server to exchange information.
+          When a user opens a page, clicks a link, or submits a form, HTTP helps deliver that request and return
+          a response. Even though people do not usually see HTTP directly, it is working behind the scenes any
+          time a website loads.
+        </p>
+
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="http-overview.html">HTTP Overview</a></li>
+          <li><a href="http-evolution-security.html">Evolution and Security</a></li>
+          <li><a href="http-key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References and Resources</a></li>
+          <li><a href="about.html">About the Student and Project</a></li>
+        </ul>
+      </article>
+
+      <aside class="card">
+        <h2>Key Terms</h2>
+        <ul>
+          <li>Client-server model</li>
+          <li>Request and response</li>
+          <li>Status codes</li>
+          <li>HTTP methods</li>
+          <li>HTTPS</li>
+          <li>HTTP/2 and HTTP/3</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Flexbox row to satisfy the styling requirement -->
+    <section class="feature-row">
+      <div class="feature-box">
+        <h3>Why HTTP Matters</h3>
+        <p>It makes it possible for webpages, images, forms, videos, and web applications to load and work correctly.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Why Security Matters</h3>
+        <p>HTTPS protects private data by encrypting communication between the user and the website.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Why It Is Still Growing</h3>
+        <p>Newer versions such as HTTP/3 improve speed, reliability, and performance on mobile networks.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <p>This is a class project for IT 3203. Visit the
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
