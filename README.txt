@@ -9,5 +9,4 @@ Files in this folder:
 - about.html
 - styles.css
 
-Upload all of these files directly to the main level of your GitHub repo.
-Do not upload the folder itself.
+
