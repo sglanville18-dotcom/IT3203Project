@@ -1,9 +1,6 @@
-/* 
-  Shemar Glanville
-  IT 3203 - Project Milestone 1
-  Shared stylesheet for the whole website.
-  I kept the design simple but added a little more style so it looks cleaner and more polished.
-*/
+/* Shemar Glanville
+   IT 3203 Project Milestone 1
+   Main stylesheet for all pages */
 
 * {
   box-sizing: border-box;
@@ -23,7 +20,7 @@ body {
   background-position: center;
 }
 
-/* Header and navigation */
+/* top header */
 .site-header {
   background: rgba(22, 50, 79, 0.96);
   color: white;
@@ -62,14 +59,14 @@ body {
   color: #102a43;
 }
 
-/* Main layout */
+/* page width */
 .page-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px 20px 40px;
 }
 
-/* Decorative top section */
+/* intro sections */
 #hero,
 .page-banner {
   background: rgba(255, 255, 255, 0.92);
@@ -86,7 +83,6 @@ body {
   margin-top: 0;
 }
 
-/* Simple section line */
 h2 {
   color: #16324f;
   border-bottom: 2px solid #d9e2ec;
@@ -98,6 +94,7 @@ h1, h3 {
   color: #16324f;
 }
 
+/* grid section */
 .grid-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -113,6 +110,7 @@ h1, h3 {
   box-shadow: 0 3px 10px rgba(15, 23, 42, 0.07);
 }
 
+/* flex boxes on home page */
 .feature-row {
   display: flex;
   gap: 18px;
