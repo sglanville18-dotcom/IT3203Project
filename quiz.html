@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Self-Check</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero hero-quiz">
+    <div class="hero-overlay">
+      <h1>Check yourself on HTTP</h1>
+      <p>This quiz was made to match the content in this site instead of feeling like a generic web quiz.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="content-card">
+      <h2>Short self-check</h2>
+      <p>
+        The questions below focus on the main ideas covered in the site. After you submit, the page will show your total score, pass or fail result,
+        whether each answer was correct, and the correct answer for each question.
+      </p>
+
+      <form id="quizForm" class="quiz-form">
+        <div class="question-block">
+          <label for="blankQuestion"><strong>1. Fill in the blank:</strong> In web communication, HTTP stands for <span class="highlight">__________</span>.</label>
+          <input type="text" id="blankQuestion" name="blankQuestion" placeholder="Type the full phrase here">
+        </div>
+
+        <div class="question-block">
+          <p><strong>2. Which method is most commonly used when a browser is simply asking to view a page or retrieve data?</strong></p>
+          <label><input type="radio" name="q2" value="GET"> GET</label>
+          <label><input type="radio" name="q2" value="PATCH"> PATCH</label>
+          <label><input type="radio" name="q2" value="TRACE"> TRACE</label>
+        </div>
+
+        <div class="question-block">
+          <p><strong>3. If a browser receives a 404 response, what is the best explanation?</strong></p>
+          <label><input type="radio" name="q3" value="Browser Update Needed"> The browser version is too old</label>
+          <label><input type="radio" name="q3" value="Resource Missing"> The requested page or resource could not be found</label>
+          <label><input type="radio" name="q3" value="Login Success"> The login was successful</label>
+        </div>
+
+        <div class="question-block">
+          <p><strong>4. Why do secure websites use HTTPS instead of plain HTTP?</strong></p>
+          <label><input type="radio" name="q4" value="Encryption"> It adds encryption and helps protect data in transit</label>
+          <label><input type="radio" name="q4" value="Offline"> It allows the website to work without internet</label>
+          <label><input type="radio" name="q4" value="Images"> It is only needed for loading images</label>
+        </div>
+
+        <div class="question-block">
+          <p><strong>5. Select all choices that are actual parts or concepts related to normal HTTP communication.</strong></p>
+          <label><input type="checkbox" name="q5" value="Headers"> Headers</label>
+          <label><input type="checkbox" name="q5" value="Status Codes"> Status codes</label>
+          <label><input type="checkbox" name="q5" value="Request Methods"> Request methods</label>
+          <label><input type="checkbox" name="q5" value="Dragon Protocol"> Dragon Protocol</label>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-btn">Grade My Quiz</button>
+          <button type="button" class="secondary-btn" id="resetBtn">Retake / Reset</button>
+        </div>
+      </form>
+
+      <section id="results" class="results-panel hidden" aria-live="polite">
+        <h3>Your results</h3>
+        <div id="summaryResult"></div>
+        <div id="questionResults"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
+  <script src="quiz.js"></script>
+</body>
+</html>

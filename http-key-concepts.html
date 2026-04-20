@@ -3,52 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTP Project | Key Concepts</title>
+  <title>HTTP Core Ideas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- navigation -->
-  <header class="site-header">
-  <div class="nav-container">
-    <div class="brand">HTTP Project</div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="http-overview.html">HTTP Overview</a>
-      <a href="http-evolution-security.html">Evolution & Security</a>
-      <a href="http-key-concepts.html">Key Concepts</a>
-      <a href="references.html">References</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
 
-  <main class="page-container">
-    <section class="page-banner">
-      <h1>Key Concepts</h1>
-      <p>
-        This page goes over a few terms that help explain how HTTP works.
-      </p>
+  <header class="hero hero-concepts">
+    <div class="hero-overlay">
+      <h1>Core HTTP ideas worth remembering</h1>
+      <p>This page focuses on the parts of HTTP that show up often when building, testing, or troubleshooting websites.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="grid-two">
+      <article class="content-card">
+        <h2>Status codes</h2>
+        <p>These codes tell the client what happened after a request.</p>
+        <ul class="feature-list compact-list">
+          <li><strong>200:</strong> the request worked</li>
+          <li><strong>301 / 302:</strong> the resource moved or redirected</li>
+          <li><strong>404:</strong> the requested page or resource was not found</li>
+          <li><strong>500:</strong> the server had an internal error</li>
+        </ul>
+      </article>
+
+      <article class="content-card">
+        <h2>Headers</h2>
+        <p>
+          Headers carry extra information with the request or response. They can identify the content type, accepted data format, caching rules, authorization details, and more.
+          They are one of the easiest ways to understand what is happening behind the page.
+        </p>
+      </article>
     </section>
 
-    <section class="card">
-      <ul class="concept-list">
-        <li><strong>Client-Server Model:</strong> A system where a client requests information and a server provides it.</li>
-        <li><strong>Request:</strong> A message sent by the client asking for a webpage, file, or service.</li>
-        <li><strong>Response:</strong> The server's reply, which may include a webpage, image, data, or error message.</li>
-        <li><strong>Status Codes:</strong> Standard numbers such as 200, 404, and 500 that describe the result of a request.</li>
-        <li><strong>Headers:</strong> Extra information included with requests and responses, such as content type or caching rules.</li>
-        <li><strong>HTTPS:</strong> The secure version of HTTP that encrypts data during communication.</li>
-        <li><strong>API:</strong> A way for programs and services to communicate using HTTP methods and web-based data exchange.</li>
-      </ul>
+    <section class="grid-two uneven-grid">
+      <article class="content-card accent-card">
+        <h2>Stateless by design</h2>
+        <p>
+          HTTP does not automatically remember earlier requests. Each one is treated as separate unless extra tools are used.
+          That is why websites use cookies, sessions, and tokens to remember that a user is logged in or has items in a cart.
+        </p>
+      </article>
+
+      <article class="content-card">
+        <h2>HTTP and APIs</h2>
+        <p>
+          Many APIs use HTTP because it is already built around clear requests and responses. A client can send a GET request to read data or a POST request to submit it.
+          This is one reason HTTP is not only for webpages. It is also a major part of app-to-app communication.
+        </p>
+      </article>
+    </section>
+
+    <section class="content-card">
+      <h2>Common mix-ups</h2>
+      <div class="stacked-points">
+        <div>
+          <h3>HTTP is not the internet itself</h3>
+          <p>It is one protocol used on top of lower networking layers.</p>
+        </div>
+        <div>
+          <h3>HTTPS is not a different website language</h3>
+          <p>It is HTTP with encryption and certificate-based trust.</p>
+        </div>
+        <div>
+          <h3>404 does not always mean the whole server is broken</h3>
+          <p>It usually means that one requested resource could not be found.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="footer-container">
-    <p>This is a class project for IT 3203. Visit the
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
-    </p>
-  </div>
-</footer>
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
 </body>
 </html>

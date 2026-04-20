@@ -3,120 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTP Project | Evolution and Security</title>
+  <title>HTTP Versions and Safety</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- navigation -->
-  <header class="site-header">
-  <div class="nav-container">
-    <div class="brand">HTTP Project</div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="http-overview.html">HTTP Overview</a>
-      <a href="http-evolution-security.html">Evolution & Security</a>
-      <a href="http-key-concepts.html">Key Concepts</a>
-      <a href="references.html">References</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
 
-  <main class="page-container">
-    <section class="page-banner">
-      <h1>Evolution and Security</h1>
-      <p>
-        This page covers how HTTP changed over time and why security became a big part of web communication.
-      </p>
+  <header class="hero hero-security">
+    <div class="hero-overlay">
+      <h1>How HTTP improved over time</h1>
+      <p>This section compares major HTTP versions and explains why HTTPS is now expected on modern sites.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="content-card">
+      <h2>Version changes in a simple timeline</h2>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Why it mattered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>HTTP/1.0</td><td>Handled basic web communication but was limited and less efficient</td></tr>
+          <tr><td>HTTP/1.1</td><td>Improved reuse of connections and became the long-running standard</td></tr>
+          <tr><td>HTTP/2</td><td>Allowed multiple streams over one connection and reduced overhead</td></tr>
+          <tr><td>HTTP/3</td><td>Uses QUIC and is built to reduce delay and connection problems</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <section class="grid-layout">
-      <article class="card">
-        <h2>How HTTP Evolved</h2>
+    <section class="grid-two uneven-grid">
+      <article class="content-card accent-card">
+        <h2>Why HTTPS is not optional anymore</h2>
         <p>
-          Early HTTP was much simpler and mostly focused on transferring basic text documents. As the internet grew, websites became more advanced and needed support for images, media, interactive features, and better speed. That led to newer versions of the protocol.
-        </p>
-
-        <h2>Major Versions</h2>
-        <ul>
-          <li><strong>HTTP/1.0:</strong> An early version that introduced more structured communication.</li>
-          <li><strong>HTTP/1.1:</strong> Improved efficiency and became the long-term standard for many years.</li>
-          <li><strong>HTTP/2:</strong> Increased speed by allowing multiple resources to move across one connection.</li>
-          <li><strong>HTTP/3:</strong> Focuses on speed, reliability, and improved performance on unstable networks.</li>
-        </ul>
-
-        <h2>Why These Changes Matter</h2>
-        <p>
-          Modern users expect websites to load quickly and work smoothly on phones, tablets, and laptops.
-          The newer versions of HTTP help reduce loading delays and improve the overall user experience.
+          HTTPS is basically HTTP running with encryption. Without it, information sent between the browser and server can be easier to read or change if intercepted.
+          That matters even on sites that seem simple, because users still type search terms, logins, personal details, and other information into web forms.
         </p>
       </article>
 
-      <aside class="card">
-        <h2>Why HTTPS Matters</h2>
-        <p>
-          Standard HTTP does not encrypt data. That means information can be exposed while moving across a network.
-          HTTPS solves that problem by adding encryption through TLS, which helps protect passwords, payment data,
-          and personal information.
-        </p>
-
-        <h3>Benefits of HTTPS</h3>
-        <ul>
-          <li>Protects private information</li>
-          <li>Builds trust with users</li>
-          <li>Helps websites appear more secure in browsers</li>
-          <li>Supports safer online shopping, banking, and communication</li>
+      <article class="content-card">
+        <h2>What HTTPS helps with</h2>
+        <ul class="feature-list">
+          <li>Keeps transmitted data harder to read by outsiders</li>
+          <li>Helps confirm users are talking to the intended site</li>
+          <li>Protects integrity so data is less likely to be altered in transit</li>
+          <li>Builds trust because browsers now warn users about insecure pages</li>
         </ul>
-      </aside>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>Comparison Table</h2>
-      <table>
-        <tr>
-          <th>Version / Protocol</th>
-          <th>Main Focus</th>
-          <th>Why It Is Important</th>
-        </tr>
-        <tr>
-          <td>HTTP/1.0</td>
-          <td>Basic web communication</td>
-          <td>Helped create the early structure of the web</td>
-        </tr>
-        <tr>
-          <td>HTTP/1.1</td>
-          <td>Efficiency improvements</td>
-          <td>Became widely used across websites and servers</td>
-        </tr>
-        <tr>
-          <td>HTTP/2</td>
-          <td>Performance and speed</td>
-          <td>Allowed multiple transfers over one connection</td>
-        </tr>
-        <tr>
-          <td>HTTP/3</td>
-          <td>Reliability and mobile performance</td>
-          <td>Works better in modern and less stable network conditions</td>
-        </tr>
-        <tr>
-          <td>HTTPS</td>
-          <td>Security</td>
-          <td>Encrypts communication to protect sensitive data</td>
-        </tr>
-      </table>
-
-      <div class="tip-box">
-        <strong>My take:</strong> What stood out to me here is that HTTP did not stay the same. It kept changing as websites and user needs changed, especially with speed, security, and mobile access.
-      </div>
+    <section class="content-card">
+      <h2>Security and performance both matter</h2>
+      <p>
+        It is easy to think of speed and safety as two separate topics, but modern web systems need both. A site that is secure but slow still frustrates users. A fast site without proper protection can expose sensitive information.
+        Newer HTTP versions try to improve efficiency, while HTTPS protects the connection itself.
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="footer-container">
-    <p>This is a class project for IT 3203. Visit the
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
-    </p>
-  </div>
-</footer>
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
 </body>
 </html>

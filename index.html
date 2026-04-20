@@ -3,90 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTP Project | Home</title>
+  <title>HTTP Notes and Quiz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- navigation -->
-  <header class="site-header">
-  <div class="nav-container">
-    <div class="brand">HTTP Project</div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="http-overview.html">HTTP Overview</a>
-      <a href="http-evolution-security.html">Evolution & Security</a>
-      <a href="http-key-concepts.html">Key Concepts</a>
-      <a href="references.html">References</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
 
-  <main class="page-container">
-    <!-- Intro section for the homepage -->
-    <section id="hero">
-      <h1>Hypertext Transfer Protocol (HTTP)</h1>
+  <header class="hero hero-home">
+    <div class="hero-overlay">
+      <p class="eyebrow">IT 3203 Milestone 2</p>
+      <h1>HTTP from a student point of view</h1>
+      <p>This site breaks down HTTP in a more direct way, with examples, quick reference sections, and a quiz page to check understanding after reading.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="content-card intro-card">
+      <h2>What this site is really about</h2>
       <p>
-        This website is about HTTP, which is one of the main technologies behind the web. I wanted to focus on what it does, how it changed over time, and why it still matters today. I used my Assignment 1 research as the starting point for this project.
+        When most people open a website, they only see the final page on the screen. What they do not see is the back-and-forth message exchange that made the page load in the first place.
+        HTTP is the protocol that helps make that exchange happen. It is what allows a browser to ask for a page, image, file, or API data and then receive a response from the server.
+      </p>
+      <p>
+        Instead of only listing definitions, this project focuses on what HTTP looks like in actual use: requesting pages, reading status codes, sending form data, and understanding why secure connections matter.
+        I also added a quiz page so the site does more than just display information.
       </p>
     </section>
 
-    <!-- Main page content using CSS Grid -->
-    <section class="grid-layout">
-      <article class="card">
-        <h2>Introduction</h2>
-        <p>
-          HTTP is the communication protocol that allows a browser and a web server to exchange information.
-          When a user opens a page, clicks a link, or submits a form, HTTP helps deliver that request and return
-          a response. Most users do not notice HTTP directly, but it is working in the background every time a website loads.
-        </p>
-
-        <h2>Table of Contents</h2>
-        <ul>
-          <li><a href="http-overview.html">HTTP Overview</a></li>
-          <li><a href="http-evolution-security.html">Evolution and Security</a></li>
-          <li><a href="http-key-concepts.html">Key Concepts</a></li>
-          <li><a href="references.html">References and Resources</a></li>
-          <li><a href="about.html">About the Student and Project</a></li>
+    <section class="grid-two uneven-grid">
+      <article class="content-card accent-card">
+        <h2>Topics covered in this project</h2>
+        <ul class="feature-list">
+          <li>How a browser request turns into a server response</li>
+          <li>What methods like GET and POST are used for</li>
+          <li>Why 200, 404, and 500 status codes matter</li>
+          <li>How HTTP changed from older versions to HTTP/3</li>
+          <li>Why HTTPS matters for login forms and private data</li>
+          <li>How HTTP is also used behind many APIs</li>
         </ul>
       </article>
 
-      <aside class="card">
-        <h2>Key Terms</h2>
-        <ul>
-          <li>Client-server model</li>
-          <li>Request and response</li>
-          <li>Status codes</li>
-          <li>HTTP methods</li>
-          <li>HTTPS</li>
-          <li>HTTP/2 and HTTP/3</li>
-        </ul>
-      </aside>
+      <article class="content-card notes-card">
+        <h2>Fast memory trick</h2>
+        <p>
+          I think of HTTP like this: the browser is the one asking the question, and the server is the one answering it.
+          The answer does not only include the page content. It also includes a status, extra details in headers, and sometimes instructions about caching or content type.
+        </p>
+        <div class="mini-note">
+          <strong>Simple pattern:</strong> request → processing → response → browser displays result
+        </div>
+        <a class="button-link" href="quiz.html">Go to quiz</a>
+      </article>
     </section>
 
-    <!-- Flexbox row to satisfy the styling requirement -->
-    <section class="feature-row">
-      <div class="feature-box">
-        <h3>Why HTTP Matters</h3>
-        <p>It makes it possible for webpages, images, forms, videos, and web applications to load and work correctly.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Why Security Matters</h3>
-        <p>HTTPS protects private data by encrypting communication between the user and the website.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Why It Is Still Growing</h3>
-        <p>Newer versions such as HTTP/3 improve speed, reliability, and performance on mobile networks.</p>
+    <section class="content-card">
+      <h2>Why this topic matters outside of class</h2>
+      <div class="stacked-points">
+        <div>
+          <h3>Web development</h3>
+          <p>Every time a page loads CSS, JavaScript, images, or API data, HTTP is part of the process.</p>
+        </div>
+        <div>
+          <h3>Cybersecurity</h3>
+          <p>Understanding secure versus insecure traffic matters when looking at login pages, certificates, and data exposure.</p>
+        </div>
+        <div>
+          <h3>Troubleshooting</h3>
+          <p>Status codes and headers help explain why a page failed, redirected, or loaded the wrong content.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="footer-container">
-    <p>This is a class project for IT 3203. Visit the
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
-    </p>
-  </div>
-</footer>
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
 </body>
 </html>

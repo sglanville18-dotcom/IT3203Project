@@ -3,95 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTP Project | HTTP Overview</title>
+  <title>How HTTP Works</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- navigation -->
-  <header class="site-header">
-  <div class="nav-container">
-    <div class="brand">HTTP Project</div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="http-overview.html">HTTP Overview</a>
-      <a href="http-evolution-security.html">Evolution & Security</a>
-      <a href="http-key-concepts.html">Key Concepts</a>
-      <a href="references.html">References</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
 
-  <main class="page-container">
-    <section class="page-banner">
-      <h1>HTTP Overview</h1>
+  <header class="hero hero-overview">
+    <div class="hero-overlay">
+      <h1>How HTTP works during a normal page load</h1>
+      <p>This page focuses on the actual flow from clicking a link to seeing content in the browser.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="content-card">
+      <h2>The main job of HTTP</h2>
       <p>
-        This page explains what HTTP is, how it works, and why it matters in everyday internet use.
+        HTTP works at the application layer and is mainly used to move web-related information between a client and a server.
+        In most everyday situations, the client is the browser and the server is the machine hosting the website or service.
+        The browser sends a request for a resource, and the server returns a response that contains both data and metadata.
       </p>
     </section>
 
-    <section class="card">
-      <h2>What HTTP Does</h2>
-      <p>
-        HTTP stands for Hypertext Transfer Protocol. It is a set of rules that lets a client and a server communicate over the web. In most cases, the client is a browser and the server is the computer that stores the website or app data. HTTP matters because it gives both sides a standard way to exchange information.
-      </p>
+    <section class="grid-two">
+      <article class="content-card">
+        <h2>Page load walkthrough</h2>
+        <ol class="number-list">
+          <li>A user enters a URL or clicks a link.</li>
+          <li>The browser identifies the resource it needs.</li>
+          <li>An HTTP request is sent to the server.</li>
+          <li>The server responds with a status code, headers, and content.</li>
+          <li>The browser may send extra requests for CSS, JavaScript, images, or fonts.</li>
+          <li>The page is assembled and displayed.</li>
+        </ol>
+      </article>
 
-      <h2>How the Request-Response Process Works</h2>
-      <ol>
-        <li>The user enters a web address or clicks a link.</li>
-        <li>The browser sends an HTTP request to the server.</li>
-        <li>The server processes the request and finds the correct resource.</li>
-        <li>The server sends back an HTTP response.</li>
-        <li>The browser displays the webpage, image, or other content.</li>
-      </ol>
+      <article class="content-card">
+        <h2>Methods you will keep seeing</h2>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>What it usually does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>GET</td><td>Reads or requests information</td></tr>
+            <tr><td>POST</td><td>Sends new information to be processed</td></tr>
+            <tr><td>PUT</td><td>Replaces or updates an existing resource</td></tr>
+            <tr><td>DELETE</td><td>Requests removal of a resource</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
 
-      <!-- Simple image section to meet the image requirement -->
-      <img
-        class="info-image"
-        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/HTTP_logo.svg"
-        alt="HTTP logo used as a visual for the page">
-
-      <h2>Common HTTP Methods</h2>
-      <table>
-        <tr>
-          <th>Method</th>
-          <th>Main Purpose</th>
-          <th>Example Use</th>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>Retrieves information from a server</td>
-          <td>Opening a webpage or loading a product page</td>
-        </tr>
-        <tr>
-          <td>POST</td>
-          <td>Sends data to a server</td>
-          <td>Submitting a login form or creating a new account</td>
-        </tr>
-        <tr>
-          <td>PUT</td>
-          <td>Updates an existing resource</td>
-          <td>Editing profile information in a web app</td>
-        </tr>
-        <tr>
-          <td>DELETE</td>
-          <td>Removes a resource</td>
-          <td>Deleting a saved item or record</td>
-        </tr>
-      </table>
-
-      <div class="tip-box">
-        <strong>My take:</strong> One thing I noticed while working on this topic is that HTTP is pretty simple at the basic level, but it can still support modern websites and apps.
+    <section class="content-card split-card">
+      <div>
+        <h2>What is inside the request?</h2>
+        <p>A request commonly includes the method, the resource path, the protocol version, headers, and sometimes a message body.</p>
       </div>
+      <div>
+        <h2>What is inside the response?</h2>
+        <p>A response usually includes a status code, headers, and the returned data such as HTML, JSON, an image, or a file.</p>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>One detail students usually miss</h2>
+      <p>
+        A single webpage is often not one request. It can be many requests. The main HTML file may load first, but then the browser asks for stylesheets, scripts, images, icons, and sometimes API data.
+        That is part of why performance matters so much in modern HTTP versions.
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="footer-container">
-    <p>This is a class project for IT 3203. Visit the
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.
-    </p>
-  </div>
-</footer>
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
 </body>
 </html>

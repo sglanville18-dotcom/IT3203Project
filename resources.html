@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Sources</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-brand">HTTP Notes and Quiz</div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="http-overview.html">How HTTP Works</a></li>
+      <li><a href="http-evolution-security.html">Versions & Safety</a></li>
+      <li><a href="http-key-concepts.html">Core Ideas</a></li>
+      <li><a href="quiz.html">Check Yourself</a></li>
+      <li><a href="resources.html">Sources</a></li>
+      <li><a href="about.html">Project Notes</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero hero-resources">
+    <div class="hero-overlay">
+      <h1>Sources and added research</h1>
+      <p>This page records the outside references used to strengthen the content for milestone 2.</p>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="content-card">
+      <h2>Main references</h2>
+      <ul class="resource-list">
+        <li><strong>MDN Web Docs</strong> for HTTP messages, methods, headers, status codes, and general browser behavior.</li>
+        <li><strong>IETF RFC material</strong> for formal protocol background and version details.</li>
+        <li><strong>Cloudflare Learning Center</strong> for plain-language explanations of HTTPS, TLS, and HTTP/3.</li>
+        <li><strong>W3C and browser documentation</strong> for web standards context.</li>
+      </ul>
+    </section>
+
+    <section class="grid-two">
+      <article class="content-card">
+        <h2>What was expanded in this milestone</h2>
+        <ul class="feature-list">
+          <li>More explanation about request and response structure</li>
+          <li>More detail about HTTP versions and why they changed</li>
+          <li>Added notes on stateless behavior, cookies, and APIs</li>
+          <li>Separate quiz page added to the site navigation</li>
+        </ul>
+      </article>
+
+      <article class="content-card accent-card">
+        <h2>Helpful next topics</h2>
+        <ul class="feature-list">
+          <li>Browser developer tools and network tabs</li>
+          <li>REST APIs and JSON responses</li>
+          <li>TLS certificates and trust chains</li>
+          <li>Caching and performance tuning</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>IT 3203 Project | Dynamic Frontend Milestone | HTTP topic site</p>
+  </footer>
+</body>
+</html>
