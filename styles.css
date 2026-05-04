@@ -377,3 +377,43 @@ body {
     font-size: 1.85rem;
   }
 }
+/* ===== Milestone 3 Final Responsive Improvements ===== */
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  /* Fix tables on mobile */
+  .styled-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Buttons easier to tap */
+  .button-link,
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Quiz usability */
+  .question-block {
+    padding: 0.9rem;
+  }
+}
